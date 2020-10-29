@@ -1,0 +1,780 @@
+//imports ______________________________________________________________________
+@import "./_font.scss";
+@import "./variable";
+// @import "./nav";
+
+//Mixins ______________________________________________________________________
+@mixin flexcenter($direction) {
+  display: flex;
+  justify-content: flex-start;
+  //   align-items: center;
+  margin: 0 auto;
+  flex-direction: $direction;
+}
+
+@mixin mobileDisplay {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin tabletDisplay {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin desktopDisplay {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
+// Decorations ______________________________________________________________________
+ul {
+  list-style-type: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  color: $white;
+}
+
+hr {
+  height: 4px;
+  width: 90%;
+  border-width: 0;
+
+  background-color: $second-color;
+
+  margin-right: 10rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+// Desktop _________________________________________________
+body {
+  color: $white;
+  background: $black;
+  font-weight: weight(regular);
+  font-family: $Quattro;
+
+  // Mobile Display ______________________________________________________
+  @include mobileDisplay {
+    color: $white;
+    background: $black;
+    font-weight: weight(regular);
+    font-family: $Quattro;
+
+    // Navigation Bar ________________________________________
+    .line {
+      width: 30px;
+      height: 3px;
+      background: $white;
+      margin: 5px;
+    }
+
+    nav {
+      position: relative;
+      background: $black;
+      font-family: $Osw;
+      font-size: size(regular);
+    }
+
+    .hamburger {
+      display: none;
+      position: absolute;
+      cursor: pointer;
+      right: 5%;
+      top: 50%;
+      transform: translate(-5%, -50%);
+      z-index: 2;
+    }
+
+    .nav-links {
+      position: fixed;
+      background: $black2;
+      height: 100vh;
+      width: 100%;
+      flex-direction: column;
+      // display: none;
+      clip-path: circle(0px at 90% -10%);
+      -webkit-clip-path: circle(0px at 90% -10%);
+      transition: all 0.5s ease-out;
+
+      pointer-events: none;
+    }
+
+    .nav-links.open {
+      clip-path: circle(1500px at 90% -10%);
+      -webkit-clip-path: circle(1500px at 90% -10%);
+
+      pointer-events: all;
+    }
+
+    // Introduction ________________________________________
+    .intro {
+      color: $white;
+      font-family: $Osw;
+
+      padding-top: 10rem;
+      padding-left: 2rem;
+      padding-bottom: 15rem;
+
+      #intro--h6 {
+        color: $second-color;
+        font-size: size(regular);
+        padding-bottom: 1rem;
+        animation: fadeIn 1s, 0.7s ease-out 0s 1 slideInFromLeft;
+      }
+
+      #intro--name {
+        color: $primary-color;
+        font-size: size(large);
+        padding-bottom: 1rem;
+        animation: fadeIn 1s, 1s ease-out 0s 1 slideInFromLeft;
+      }
+
+      #intro--description {
+        color: $third-color;
+
+        font-size: size(small);
+        font-weight: weight(low);
+
+        padding-right: 1.5rem;
+        animation: fadeIn 1s, 1s ease-out 0s 1 slideInFromLeft;
+      }
+
+      #down-button {
+        margin-top: 3rem;
+
+        color: $primary-color;
+        background: $black;
+        border-color: $primary-color;
+        border-radius: 5px;
+        border-style: solid;
+        border-width: 3px;
+
+        letter-spacing: 1px;
+        font-size: size(small);
+        font-weight: weight(bold);
+        padding: 1rem;
+
+        animation: fadeIn 1s, 0.7s ease-out 0s 1 slideInFromLeft;
+
+        #a--button {
+          color: $primary-color;
+        }
+      }
+    }
+
+    // Projects ________________________________________
+    .project {
+      color: $white;
+      font-family: $Osw;
+
+      padding: 10rem 0 20rem 2rem;
+
+      #project--header {
+        color: $primary-color;
+        font-size: size(med-large);
+        padding-bottom: 1rem;
+
+        letter-spacing: 2px;
+      }
+
+      .project1 {
+        color: $white;
+
+        #project1--title {
+          color: $third-color;
+          font-size: size(medium);
+
+          padding-bottom: 1rem;
+          margin-top: 3rem;
+        }
+
+        #project1--img {
+          width: 90%;
+          height: auto;
+
+          // -----------------------
+          margin-bottom: 2rem;
+          grid-area: photo;
+          // -----------------------
+          color: $black2;
+          border-color: $black2;
+          border-radius: 5px;
+          border-style: solid;
+          border-width: 2.5px;
+
+          box-shadow: 20px 20px 6px -6px $third-color;
+        }
+
+        #project1--description {
+          color: $third-color;
+          font-size: size(xtra-small);
+          font-weight: weight(low);
+          padding-right: 1.5rem;
+        }
+
+        #hr--project1 {
+          height: 2px;
+          width: 90%;
+          border-width: 0;
+
+          background-color: $white;
+
+          margin-right: 10rem;
+        }
+
+        .project1--list {
+          display: flex;
+          height: 50px;
+          flex-direction: row;
+          list-style-type: none;
+          line-height: 20px;
+        }
+
+        .project1--list_item {
+          padding: 0 0.5rem;
+
+          // border-color: $primary-color;
+          // border-radius: 5px;
+          // border-style: solid;
+          // border-width: 3px;
+        }
+      }
+
+      #project1 {
+        margin-bottom: 10rem;
+      }
+    }
+
+    // About Me ________________________________________
+    .about-me {
+      color: $white;
+      font-family: $Osw;
+
+      padding-left: 2rem;
+
+      #about--header {
+        color: $primary-color;
+        font-size: size(med-large);
+        padding-bottom: 1rem;
+
+        letter-spacing: 2px;
+      }
+
+      .description {
+        padding-right: 1.5rem;
+        font-size: size(small);
+        font-weight: weight(low);
+      }
+
+      #paragraph2 {
+        padding-bottom: 1rem;
+      }
+
+      #skill--header {
+        color: $primary-color;
+        font-size: size(small);
+        padding-bottom: 0.5rem;
+
+        letter-spacing: 2px;
+      }
+
+      .skill-list {
+        display: flex;
+        flex-flow: row wrap;
+
+        padding-bottom: 10rem;
+        padding-right: 1.5rem;
+      }
+
+      .skill--list_item {
+        // color: $second-color;
+        // border-color: $primary-color;
+        // border-radius: 5px;
+        // border-style: solid;
+        // border-width: 3px;
+
+        font-size: size(medium);
+        padding: 1rem 0;
+        margin-bottom: 1rem;
+
+        // flex: (length of each box) (coverage of the flexbox)
+        flex: 0.5 0 50%;
+      }
+    }
+  }
+
+  // ___________________________________________________________________
+  // Tablet Display_____________________________________________________
+  // ___________________________________________________________________
+
+  @include tabletDisplay {
+    // Navbar ________________________________________
+    nav {
+      position: relative;
+      background: $black;
+      font-family: $Osw;
+      font-size: size(small);
+      font-weight: weight(regular);
+      letter-spacing: 2px;
+    }
+
+    // Introduction ________________________________________
+    .intro {
+      color: $white;
+      font-family: $Osw;
+
+      padding-top: 10rem;
+      padding-left: 2rem;
+      padding-bottom: 15rem;
+
+      #intro--h6 {
+        color: $second-color;
+        font-size: size(med-large);
+        padding-bottom: 1rem;
+        animation: fadeIn 1s, 0.7s ease-out 0s 1 slideInFromLeft;
+      }
+
+      #intro--name {
+        color: $primary-color;
+        font-size: size(large);
+        padding-bottom: 1rem;
+        animation: fadeIn 1s, 1s ease-out 0s 1 slideInFromLeft;
+      }
+
+      #intro--description {
+        color: $third-color;
+
+        font-size: size(medium);
+        font-weight: weight(low);
+
+        padding-right: 1.5rem;
+        animation: fadeIn 1s, 1s ease-out 0s 1 slideInFromLeft;
+      }
+
+      #down-button {
+        margin-top: 3rem;
+
+        color: $primary-color;
+        background: $black;
+        border-color: $primary-color;
+        border-radius: 5px;
+        border-style: solid;
+        border-width: 3px;
+
+        letter-spacing: 1px;
+        font-size: size(small);
+        font-weight: weight(bold);
+        padding: 1rem;
+
+        animation: fadeIn 1s, 0.7s ease-out 0s 1 slideInFromLeft;
+
+        #a--button {
+          color: $primary-color;
+        }
+      }
+    }
+
+    // Projects ________________________________________
+    .project {
+      color: $white;
+      font-family: $Osw;
+
+      padding: 10rem 0 20rem 2rem;
+
+      #project--header {
+        color: $primary-color;
+        font-size: size(med-large);
+        padding-bottom: 1rem;
+
+        letter-spacing: 2px;
+      }
+
+      .project1 {
+        margin-top: 3rem;
+        color: $white;
+        display: grid;
+        grid-template-rows: 0.1fr 1fr 0.1fr;
+        grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr;
+        grid-template-areas:
+          "title title title"
+          "photo photo photo"
+          "description description description"
+          "footer footer footer";
+
+        #project1--title {
+          color: $third-color;
+          font-size: size(regular);
+          padding-bottom: 2rem;
+          // -----------------------
+          grid-area: title;
+        }
+
+        #project1--img {
+          width: 120%;
+          height: auto;
+          // -----------------------
+          margin-bottom: 2rem;
+          grid-area: photo;
+          // -----------------------
+          color: $black2;
+          border-color: $black2;
+          border-radius: 5px;
+          border-style: solid;
+          border-width: 2.5px;
+
+          box-shadow: 20px 20px 6px -6px $third-color;
+        }
+
+        #project1--description {
+          color: $third-color;
+          font-size: size(medium);
+          font-weight: weight(low);
+          padding: 1rem 0;
+          //  -----------------------
+          grid-area: description;
+        }
+
+        #hr--project1 {
+          height: 2px;
+          width: 90%;
+          border-width: 0;
+
+          background-color: $white;
+
+          margin-right: 10rem;
+        }
+
+        .project1--list {
+          display: flex;
+          height: 50px;
+          flex-direction: row;
+          list-style-type: none;
+          line-height: 20px;
+          //  -----------------------
+          grid-area: footer;
+        }
+
+        .project1--list_item {
+          margin: 0 1rem 0 0;
+          font-size: size(medium);
+        }
+      }
+
+      #project1 {
+        margin-bottom: 10rem;
+      }
+
+      .project1 {
+        margin-top: 3rem;
+        // margin-bottom: 10rem;
+        color: $white;
+        display: grid;
+        grid-template-rows: 0.1fr 1fr 0.1fr;
+        grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr;
+        grid-template-areas:
+          "title title title"
+          "photo photo photo"
+          "description description description"
+          "footer footer footer";
+
+        #project1--title {
+          color: $third-color;
+          font-size: size(regular);
+          padding-bottom: 2rem;
+          // -----------------------
+          grid-area: title;
+        }
+
+        #project1--img {
+          width: 120%;
+          height: auto;
+          // -----------------------
+          margin-bottom: 2rem;
+          grid-area: photo;
+          // -----------------------
+          color: $black2;
+          border-color: $black2;
+          border-radius: 5px;
+          border-style: solid;
+          border-width: 2.5px;
+
+          box-shadow: 20px 20px 6px -6px $third-color;
+        }
+
+        #project1--description {
+          color: $third-color;
+          font-size: size(medium);
+          font-weight: weight(low);
+          padding: 1rem 0;
+          //  -----------------------
+          grid-area: description;
+        }
+
+        #hr--project1 {
+          height: 2px;
+          width: 90%;
+          border-width: 0;
+
+          background-color: $white;
+
+          margin-right: 10rem;
+        }
+
+        .project1--list {
+          display: flex;
+          height: 50px;
+          flex-direction: row;
+          list-style-type: none;
+          line-height: 20px;
+          //  -----------------------
+          grid-area: footer;
+        }
+
+        .project1--list_item {
+          margin: 0 1rem 0 0;
+          font-size: size(medium);
+        }
+      }
+    }
+
+    // About Me ________________________________________
+    .about-me {
+      color: $white;
+      font-family: $Osw;
+
+      padding-left: 2rem;
+
+      #about--header {
+        color: $primary-color;
+        font-size: size(med-large);
+        padding-bottom: 1rem;
+
+        letter-spacing: 2px;
+      }
+
+      .description {
+        padding-right: 1.5rem;
+        font-size: size(medium);
+        font-weight: weight(low);
+      }
+
+      #paragraph2 {
+        padding-bottom: 1rem;
+      }
+
+      #skill--header {
+        color: $primary-color;
+        font-size: size(small);
+        padding-bottom: 0.5rem;
+
+        letter-spacing: 2px;
+      }
+
+      .skill-list {
+        display: flex;
+        flex-flow: row wrap;
+
+        padding-bottom: 10rem;
+        padding-right: 1.5rem;
+      }
+
+      .skill--list_item {
+        // color: $second-color;
+        // border-color: $primary-color;
+        // border-radius: 5px;
+        // border-style: solid;
+        // border-width: 3px;
+
+        font-size: size(regular);
+        padding: 1rem 0;
+        margin-bottom: 1rem;
+
+        // flex: (length of each box) (coverage of the flexbox)
+        flex: 0.5 0 50%;
+      }
+    }
+  }
+
+  @include desktopDisplay {
+    nav {
+      position: relative;
+      font-size: size(medium);
+      font-weight: weight(regular);
+      letter-spacing: 1px;
+    }
+
+    .intro {
+      color: $white;
+      font-family: $Osw;
+      // color: $second-color;
+      // border-color: $primary-color;
+      // border-radius: 5px;
+      // border-style: solid;
+      // border-width: 3px;
+      padding: 10rem 0 20rem 4rem;
+
+      #intro--h6 {
+        color: $second-color;
+        font-size: size(large);
+        padding-bottom: 1.5rem;
+      }
+
+      #intro--name {
+        color: $primary-color;
+        font-size: size(super-large);
+        padding-bottom: 1.5rem;
+      }
+
+      #intro--description {
+        color: $third-color;
+        font-size: size(regular);
+        font-weight: weight(low);
+        padding-right: 1.5rem;
+      }
+
+      #down-button {
+        margin-top: 5rem;
+        border-width: 6px;
+
+        letter-spacing: 1px;
+        font-size: size(medium);
+        font-weight: weight(bold);
+        padding: 1.5rem;
+
+        #a--button {
+          color: $primary-color;
+        }
+      }
+    }
+
+    .project {
+      padding: 10rem 0 20rem 4rem;
+
+      #project--header {
+        font-size: size(large);
+        letter-spacing: 2px;
+      }
+      .project1 {
+        margin-top: 3rem;
+
+        display: grid;
+        grid-template-rows: 0.1fr 0.5fr 0.5fr 0.1fr;
+        grid-template-columns: 0.5fr 1fr;
+        grid-template-areas:
+          "title title"
+          "photo description"
+          "photo description"
+          "footer footer";
+
+        #project1--img {
+          width: 110%;
+          height: auto;
+          // -----------------------
+          margin-bottom: 2rem;
+          // -----------------------
+        }
+
+        #project1--title {
+          color: $third-color;
+          font-size: size(regular);
+          // -----------------------
+        }
+
+        #project1--description {
+          color: $third-color;
+          font-size: size(medium);
+          font-weight: weight(low);
+
+          margin: 0 5rem;
+          //  -----------------------
+        }
+
+        .project1--list {
+          display: flex;
+          height: 50px;
+          flex-direction: row;
+          list-style-type: none;
+          line-height: 20px;
+          //  -----------------------
+        }
+
+        .project1--list_item {
+          margin: 0 1rem 0 0;
+          font-size: size(medium);
+        }
+
+        #hr--project1 {
+          display: none;
+        }
+      }
+    }
+
+    #project1 {
+      padding-bottom: 8rem;
+    }
+
+    .about-me {
+      padding-left: 4rem;
+
+      #about--header {
+        color: $primary-color;
+        font-size: size(large);
+        padding-bottom: 1rem;
+
+        letter-spacing: 2px;
+      }
+
+      .skill--list_item {
+        font-size: size(med-large);
+        padding: 1rem 0;
+        margin-bottom: 1rem;
+
+        flex: 0.5 0 50%;
+      }
+    }
+  }
+}
+
+// Icons __________________________________________________
+.HTML5 {
+  color: #ffb380;
+}
+
+.CSS3 {
+  color: #66b3ff;
+}
+
+.SASS {
+  color: #ffb3d9;
+}
+
+.React {
+  color: #66ccff;
+}
+
+.Node {
+  color: #00cc66;
+}
+
+.Bootstrap {
+  color: #6666ff;
+}
+
+.Git {
+  color: #ff5050;
+}
+
+.PHP {
+  color: #a8a8fd;
+}

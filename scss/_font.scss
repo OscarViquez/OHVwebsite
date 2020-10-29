@@ -1,0 +1,32 @@
+//font-weights
+$font-weights: (
+  "low": 200,
+  "regular": 400,
+  "medium": 550,
+  "bold": 700,
+);
+
+//font-size
+$font-size: (
+  "xtra-small": 16px,
+  "small": 20px,
+  "medium": 25px,
+  "regular": 35px,
+  "med-large": 45px,                 
+  "large": 55px,
+  "super-large": 65px,
+  "mega-large": 75px
+);
+
+//fonts
+$Osw: "Oswald", "sans-serif";
+$Quattro: "Quattrocento", "serif";
+
+// font-functions
+@function weight($weight-name) {
+  @return map-get($font-weights, $weight-name);
+}
+
+@function size($weight-name) {
+  @return map-get($font-size, $weight-name);
+}
