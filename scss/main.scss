@@ -30,6 +30,12 @@
   }
 }
 
+@mixin HDdisplay {
+  @media (min-width: $largerdesktop) {
+    @content;
+  }
+}
+
 // Decorations ______________________________________________________________________
 ul {
   list-style-type: none;
@@ -130,14 +136,14 @@ body {
         color: $second-color;
         font-size: size(regular);
         padding-bottom: 1rem;
-        animation: fadeIn 1s, 0.7s ease-out 0s 1 slideInFromLeft;
+        animation: fadeIn 1s, 0.5s ease-out 0s 1 slideInFromLeft;
       }
 
       #intro--name {
         color: $primary-color;
         font-size: size(large);
         padding-bottom: 1rem;
-        animation: fadeIn 1s, 1s ease-out 0s 1 slideInFromLeft;
+        animation: fadeIn 1.5s, 0.5s ease-out 0s 1 slideInFromLeft;
       }
 
       #intro--description {
@@ -147,7 +153,7 @@ body {
         font-weight: weight(low);
 
         padding-right: 1.5rem;
-        animation: fadeIn 1s, 1s ease-out 0s 1 slideInFromLeft;
+        animation: fadeIn 2s, 0.5s ease-out 0s 1 slideInFromLeft;
       }
 
       #down-button {
@@ -165,7 +171,7 @@ body {
         font-weight: weight(bold);
         padding: 1rem;
 
-        animation: fadeIn 1s, 0.7s ease-out 0s 1 slideInFromLeft;
+        animation: fadeIn 2.5s, 0.5s ease-out 0s 1 slideInFromLeft;
 
         #a--button {
           color: $primary-color;
@@ -342,14 +348,14 @@ body {
         color: $second-color;
         font-size: size(med-large);
         padding-bottom: 1rem;
-        animation: fadeIn 1s, 0.7s ease-out 0s 1 slideInFromLeft;
+        animation: fadeIn 1s, 0.5s ease-out 0s 1 slideInFromLeft;
       }
 
       #intro--name {
         color: $primary-color;
         font-size: size(large);
         padding-bottom: 1rem;
-        animation: fadeIn 1s, 1s ease-out 0s 1 slideInFromLeft;
+        animation: fadeIn 1.5s, 0.5s ease-out 0s 1 slideInFromLeft;
       }
 
       #intro--description {
@@ -359,7 +365,7 @@ body {
         font-weight: weight(low);
 
         padding-right: 1.5rem;
-        animation: fadeIn 1s, 1s ease-out 0s 1 slideInFromLeft;
+        animation: fadeIn 2s, 0.5s ease-out 0s 1 slideInFromLeft;
       }
 
       #down-button {
@@ -377,7 +383,7 @@ body {
         font-weight: weight(bold);
         padding: 1rem;
 
-        animation: fadeIn 1s, 0.7s ease-out 0s 1 slideInFromLeft;
+        animation: fadeIn 2.5s, 0.5s ease-out 0s 1 slideInFromLeft;
 
         #a--button {
           color: $primary-color;
@@ -609,7 +615,7 @@ body {
   @include desktopDisplay {
     nav {
       position: relative;
-      font-size: size(medium);
+      font-size: size(small);
       font-weight: weight(regular);
       letter-spacing: 1px;
     }
@@ -617,7 +623,7 @@ body {
     .intro {
       color: $white;
       font-family: $Osw;
-      
+
       padding: 10rem 0 20rem 4rem;
 
       #intro--h6 {
@@ -692,7 +698,8 @@ body {
           font-size: size(medium);
           font-weight: weight(low);
 
-          margin: 0 5rem;
+          margin: 0 7rem;
+
           //  -----------------------
         }
 

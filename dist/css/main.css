@@ -1,7 +1,7 @@
 @-webkit-keyframes slideInFromLeft {
   0% {
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    -webkit-transform: translatey(100%);
+            transform: translatey(100%);
   }
   100% {
     -webkit-transform: translateX(0);
@@ -11,8 +11,8 @@
 
 @keyframes slideInFromLeft {
   0% {
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    -webkit-transform: translatey(100%);
+            transform: translatey(100%);
   }
   100% {
     -webkit-transform: translateX(0);
@@ -148,23 +148,23 @@ body {
     color: #df6945;
     font-size: 35px;
     padding-bottom: 1rem;
-    -webkit-animation: fadeIn 1s, 0.7s ease-out 0s 1 slideInFromLeft;
-            animation: fadeIn 1s, 0.7s ease-out 0s 1 slideInFromLeft;
+    -webkit-animation: fadeIn 1s, 0.5s ease-out 0s 1 slideInFromLeft;
+            animation: fadeIn 1s, 0.5s ease-out 0s 1 slideInFromLeft;
   }
   body .intro #intro--name {
     color: #d84a4a;
     font-size: 55px;
     padding-bottom: 1rem;
-    -webkit-animation: fadeIn 1s, 1s ease-out 0s 1 slideInFromLeft;
-            animation: fadeIn 1s, 1s ease-out 0s 1 slideInFromLeft;
+    -webkit-animation: fadeIn 1.5s, 0.5s ease-out 0s 1 slideInFromLeft;
+            animation: fadeIn 1.5s, 0.5s ease-out 0s 1 slideInFromLeft;
   }
   body .intro #intro--description {
     color: #c9c9c9;
     font-size: 20px;
     font-weight: 200;
     padding-right: 1.5rem;
-    -webkit-animation: fadeIn 1s, 1s ease-out 0s 1 slideInFromLeft;
-            animation: fadeIn 1s, 1s ease-out 0s 1 slideInFromLeft;
+    -webkit-animation: fadeIn 2s, 0.5s ease-out 0s 1 slideInFromLeft;
+            animation: fadeIn 2s, 0.5s ease-out 0s 1 slideInFromLeft;
   }
   body .intro #down-button {
     margin-top: 3rem;
@@ -178,8 +178,8 @@ body {
     font-size: 20px;
     font-weight: 700;
     padding: 1rem;
-    -webkit-animation: fadeIn 1s, 0.7s ease-out 0s 1 slideInFromLeft;
-            animation: fadeIn 1s, 0.7s ease-out 0s 1 slideInFromLeft;
+    -webkit-animation: fadeIn 2.5s, 0.5s ease-out 0s 1 slideInFromLeft;
+            animation: fadeIn 2.5s, 0.5s ease-out 0s 1 slideInFromLeft;
   }
   body .intro #down-button #a--button {
     color: #d84a4a;
@@ -314,23 +314,23 @@ body {
     color: #df6945;
     font-size: 45px;
     padding-bottom: 1rem;
-    -webkit-animation: fadeIn 1s, 0.7s ease-out 0s 1 slideInFromLeft;
-            animation: fadeIn 1s, 0.7s ease-out 0s 1 slideInFromLeft;
+    -webkit-animation: fadeIn 1s, 0.5s ease-out 0s 1 slideInFromLeft;
+            animation: fadeIn 1s, 0.5s ease-out 0s 1 slideInFromLeft;
   }
   body .intro #intro--name {
     color: #d84a4a;
     font-size: 55px;
     padding-bottom: 1rem;
-    -webkit-animation: fadeIn 1s, 1s ease-out 0s 1 slideInFromLeft;
-            animation: fadeIn 1s, 1s ease-out 0s 1 slideInFromLeft;
+    -webkit-animation: fadeIn 1.5s, 0.5s ease-out 0s 1 slideInFromLeft;
+            animation: fadeIn 1.5s, 0.5s ease-out 0s 1 slideInFromLeft;
   }
   body .intro #intro--description {
     color: #c9c9c9;
     font-size: 25px;
     font-weight: 200;
     padding-right: 1.5rem;
-    -webkit-animation: fadeIn 1s, 1s ease-out 0s 1 slideInFromLeft;
-            animation: fadeIn 1s, 1s ease-out 0s 1 slideInFromLeft;
+    -webkit-animation: fadeIn 2s, 0.5s ease-out 0s 1 slideInFromLeft;
+            animation: fadeIn 2s, 0.5s ease-out 0s 1 slideInFromLeft;
   }
   body .intro #down-button {
     margin-top: 3rem;
@@ -344,8 +344,8 @@ body {
     font-size: 20px;
     font-weight: 700;
     padding: 1rem;
-    -webkit-animation: fadeIn 1s, 0.7s ease-out 0s 1 slideInFromLeft;
-            animation: fadeIn 1s, 0.7s ease-out 0s 1 slideInFromLeft;
+    -webkit-animation: fadeIn 2.5s, 0.5s ease-out 0s 1 slideInFromLeft;
+            animation: fadeIn 2.5s, 0.5s ease-out 0s 1 slideInFromLeft;
   }
   body .intro #down-button #a--button {
     color: #d84a4a;
@@ -556,10 +556,10 @@ body {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 892px) {
   body nav {
     position: relative;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 400;
     letter-spacing: 1px;
   }
@@ -625,7 +625,7 @@ body {
     color: #c9c9c9;
     font-size: 25px;
     font-weight: 200;
-    margin: 0 5rem;
+    margin: 0 7rem;
   }
   body .project .project1 .project1--list {
     display: -webkit-box;

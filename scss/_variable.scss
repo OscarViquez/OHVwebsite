@@ -11,13 +11,14 @@ $shadow: 0.125em 0.125em 0.5em #303030, 0.125em 0.125em 0.5em #303030;
 // Media Queries Display
 $tablet: 760px;
 $mobile: 760px;
-$desktop: 992px;
+$desktop: 892px;
+$largerdesktop: 900px;
 
 
 // Animations ______________________________________________________________________
 @keyframes slideInFromLeft {
   0% {
-    transform: translateX(-50%);
+    transform: translatey(100%);
   }
   100% {
     transform: translateX(0);
