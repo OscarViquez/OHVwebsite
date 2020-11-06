@@ -556,7 +556,7 @@ body {
   }
 }
 
-@media (min-width: 892px) {
+@media (min-width: 1100px) {
   body nav {
     position: relative;
     font-size: 20px;
