@@ -1,8 +1,6 @@
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links')
-const links = document.querySelectorAll('.nav-links li')
-
-
-hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle("open");
-})
+$(function () {
+    $(document).scroll(function () {
+      let $nav = $(".navbar");
+      $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+    });
+  });

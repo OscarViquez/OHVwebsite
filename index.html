@@ -18,7 +18,7 @@
     </head>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Quattrocento:wght@400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
 
     <!-- font awesome -->
@@ -43,24 +43,30 @@
 
 <body>
 
-    <nav>
-        <div class="hamburger">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
-        <ul class="nav-links">
-            <li><a href="#about-me">About</a></li>
-            <li><a href="#project">My Work</a></li>
-            <li><a href="#">Contact</a></li>
+    <nav class="navbar">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">
+            <i class="fab fa-octopus-deploy"></i>
+        </label>
+        <ul class="menu-list">
+            <li class="menu-items"><a class="active" href="#about-me">About</a></li>
+            <li class="menu-items"><a class="active" href="#project">My Work</a></li>
+            <li class="menu-items"><a class="active" href="https://www.instagram.com/ohviquez/"><i class="fab fa-instagram"></i></a></li>
+            <li class="menu-items"><a class="active" href="https://www.linkedin.com/in/oscar-h-v-796998193/"><i class="fab fa-linkedin"></i></a></li>
         </ul>
+
+        
     </nav>
 
-    <section class="intro main-section" id="intro">
+    <section class="intro main-section" id="intro"
+        style="background: url(./images/ScreenIntro2.jpg); background-size: cover;">
         <!-- Greeting, Name, Job Title -->
-        <h1 class="intro--elements" id="intro--h6"> Hi! I'm</h1>
+        <h1 class="intro--elements" id="intro--h6"> Hi!</h1>
 
-        <h2 class="intro--elements" id="intro--name"> I'm Oscar H Viquez</h2>
+        <h2 class="intro--elements" id="intro--name">I'm Oscar H Viquez</h2>
 
         <p class="intro--elements" id="intro--description"> I'm a Web Developer established in Atlanta, GA
             focused
@@ -78,7 +84,7 @@
         <div class="project1" id="project1">
             <h2 class="project1--elements" id="project1--title">
                 Rod's Painting & Remodeling
-                <hr>
+                <hr class="hr--titlebar">
             </h2>
 
             <img src="./images/Web 1920 – 1.png" alt="placeholder" class="project1--elements" id="project1--img">
@@ -93,25 +99,26 @@
             </div>
 
             <div class="project1--elements project1--list" id="project1--list">
-                <li class="project1--list_item HTML5" style="color: #ffb380;"> HTML <i class="fab fa-html5"></i> </li>
-                <li class="project1--list_item CSS3" style="color: #66b3ff;"> CSS <i class="fab fa-css3"></i> </li>
-                <li class="project1--list_item Bootstrap" style="color: #6666ff;"> Bootstrap <i
+                <li class="project1--list_item HTML5" style="color: #ffb380;"> <i class="fab fa-html5"></i> </li>
+                <li class="project1--list_item CSS3" style="color: #66b3ff;"> <i class="fab fa-css3"></i> </li>
+                <li class="project1--list_item Bootstrap" style="color: #6666ff;"> <i
                         class="fab fa-bootstrap"></i> </li>
-                <li class="project1--list_item Github" href="#" style="color: #fff;"> <a href="https://github.com/OscarViquez/Rod-painting"> Github <i
-                            class="fab fa-github"></i></a> </li>
+                <li class="project1--list_item Github" href="#" style="color: #fff;"> <a
+                        href="https://github.com/OscarViquez/Rod-painting"> <i class="fab fa-github"></i></a>
+                </li>
                 <li class="project1--list_item Website-Link" style="color: #fff;"><a
-                        href="https://rodpaintremodel.com/">Link <i class="fas fa-external-link-alt"></i> </a> </li>
+                        href="https://rodpaintremodel.com/"> <i class="fas fa-external-link-alt"></i> </a> </li>
             </div>
 
         </div>
 
-        <!-- <div class="project1">
+        <div class="project1">
             <h2 class="project1--elements" id="project1--title">
-                Rod's Painting & Remodeling
-                <hr>
+                Coastal C&B
+                <hr class="hr--titlebar">
             </h2>
 
-            <img src="./images/Placeholdermockup.png" alt="placeholder" class="project1--img" id="project1--img">
+            <img src="./images/CBBScreenshot.jpg" alt="placeholder" class="project1--img" id="project1--img">
 
             <div class="project1--elements project1--description" id="project1--description">
                 <p>This site was created for a Family run business that focused on Residential & Commercial Pressure
@@ -123,25 +130,32 @@
             </div>
 
             <div class="project1--elements project1--list" id="project1--list">
-                <li class="project1--list_item HTML5" style="color: #ffb380;"> HTML <i class="fab fa-html5"></i> </li>
-                <li class="project1--list_item CSS3" style="color: #66b3ff;"> CSS <i class="fab fa-css3"></i> </li>
-                <li class="project1--list_item Bootstrap" style="color: #6666ff;"> Bootstrap <i
+                <li class="project1--list_item HTML5" style="color: #ff5050;"> <i class="fab fa-html5"></i> </li>
+                <li class="project1--list_item CSS3" style="color: #66b3ff;"><i class="fab fa-css3"></i> </li>
+                <li class="project1--list_item CSS3" style="color: #66ccff;"> <i class="fab fa-react"></i>
+                </li>
+                <li class="project1--list_item CSS3" style="color: #ffe866;"><i class="fab fa-js-square"></i> </li>
+                <li class="project1--list_item CSS3" style="color: #00cc66;"> <i class="fab fa-node-js"></i>
+                </li>
+                <li class="project1--list_item CSS3" style="color: #6eff86;"><i class="fas fa-server"></i>
+                </li>
+                <li class="project1--list_item Bootstrap" style="color: #6666ff;"><i
                         class="fab fa-bootstrap"></i> </li>
-                <li class="project1--list_item Github" href="#" style="color: #fff;"> Github <i
+                <li class="project1--list_item Github" href="#" style="color: #fff;"><i
                         class="fab fa-github"></i> </li>
-                <li class="project1--list_item Website-Link" href="#" style="color: #fff;"> Link <i
+                <li class="project1--list_item Website-Link" href="#" style="color: #fff;"><i
                         class="fas fa-external-link-alt"></i></li>
             </div>
 
-        </div> -->
+        </div>
 
 
     </section>
 
     <section class="about-me main-section" id="about-me">
         <!-- Location, Where i studied, My Mission,  -->
-        <h1 id="about--header"> About Me</h1>
-        <hr>
+        <h1 id="about--header"> About Me </h1>
+        <hr class="hr--titlebar">
 
         <p class="description about-me--element" id="paragraph1"> I'm a Web Developer established in Atlanta,
             GA focused on constructing responsive, fast, stable and beautiful Websites/ Apps.
@@ -156,13 +170,15 @@
             These are some Web technologies I use and know:
         </p>
         <div class="skill-list skill--element">
-            <li class="skill--list_item HTML5">HTML5 <i class="fab fa-html5"></i></li>
-            <li class="skill--list_item CSS3">CSS3 <i class="fab fa-css3"></i></li>
+            <li class="skill--list_item HTML5">HTML <i class="fab fa-html5"></i></li>
+            <li class="skill--list_item CSS3">CSS <i class="fab fa-css3"></i></li>
+            <li class="skill--list_item JS"> Javascript <i class="fab fa-js-square"></i></li>
             <li class="skill--list_item SASS">SASS <i class="fab fa-sass"></i></li>
             <li class="skill--list_item React">React.js <i class="fab fa-react"></i></li>
             <li class="skill--list_item Node">Node.js <i class="fab fa-node-js"></i></li>
             <li class="skill--list_item Bootstrap">Bootstrap 4 <i class="fab fa-bootstrap"></i></li>
             <li class="skill--list_item Git">Git <i class="fab fa-git-square"></i></li>
+            <li class="skill--list_item MongoDB">MongoDB <i class="fas fa-server"></i></li>
             <!-- <li class="skill--list_item PHP">PHP <i class="fab fa-php"></i></li> -->
         </div>
         <!-- Experience -->

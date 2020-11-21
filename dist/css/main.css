@@ -38,23 +38,11 @@
   }
 }
 
-nav {
-  height: 10vh;
-  background: #181818;
-}
-
-.nav-links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 50%;
-  height: 100%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: auto;
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 ul {
@@ -73,7 +61,7 @@ hr {
   height: 4px;
   width: 90%;
   border-width: 0;
-  background-color: #df6945;
+  background-color: #d67457;
   margin-right: 10rem;
 }
 
@@ -81,11 +69,89 @@ html {
   scroll-behavior: smooth;
 }
 
+.navbar.scrolled {
+  background-color: #181818 !important;
+  -webkit-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+}
+
+.navbar {
+  font-size: 30px;
+  font-weight: 550;
+  font-family: "Roboto", sans-serif;
+  background: none;
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  padding: 0;
+}
+
+label.logo {
+  color: #fff;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+.fa-instagram, .fa-linkedin {
+  font-size: 30px;
+}
+
+nav ul li a {
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 7px 13px;
+  border-radius: 3px;
+}
+
+a.active,
+a:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.checkbtn {
+  float: right;
+  font-size: 35px;
+  color: #fff;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 952px) {
+  label.logo {
+    font-size: 35px;
+    padding-left: 50px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
 body {
   color: #fff;
   background: #181818;
   font-weight: 400;
-  font-family: "Quattrocento", "serif";
+  font-family: "Roboto", sans-serif;
 }
 
 @media (max-width: 760px) {
@@ -93,67 +159,63 @@ body {
     color: #fff;
     background: #181818;
     font-weight: 400;
-    font-family: "Quattrocento", "serif";
+    font-family: "Roboto", sans-serif;
   }
-  body .line {
-    width: 30px;
-    height: 3px;
-    background: #fff;
-    margin: 5px;
-  }
-  body nav {
-    position: relative;
-    background: #181818;
-    font-family: "Oswald", "sans-serif";
-    font-size: 35px;
-  }
-  body .hamburger {
+  body .logo {
     display: none;
-    position: absolute;
-    cursor: pointer;
-    right: 5%;
-    top: 50%;
-    -webkit-transform: translate(-5%, -50%);
-            transform: translate(-5%, -50%);
-    z-index: 2;
   }
-  body .nav-links {
+  body .checkbtn {
+    display: block;
+    margin: 0 0 0 19rem;
+  }
+  body .fa-bars {
+    padding: .5rem .5rem;
+  }
+  body .menu-list {
     position: fixed;
-    background: #2b2b2b;
-    height: 100vh;
     width: 100%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    clip-path: circle(0px at 90% -10%);
-    -webkit-clip-path: circle(0px at 90% -10%);
-    -webkit-transition: all 0.5s ease-out;
-    transition: all 0.5s ease-out;
-    pointer-events: none;
+    height: 100vh;
+    background: #181818;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    -webkit-transition: all .5s;
+    transition: all .5s;
   }
-  body .nav-links.open {
-    clip-path: circle(1500px at 90% -10%);
-    -webkit-clip-path: circle(1500px at 90% -10%);
-    pointer-events: all;
+  body nav ul li {
+    display: block;
+  }
+  body nav ul li a {
+    font-size: 20px;
+  }
+  body a:hover,
+  body a:active {
+    background: #fa5d5d;
+    color: #fff;
+  }
+  body #check:checked ~ ul {
+    left: 0;
   }
   body .intro {
     color: #fff;
-    font-family: "Oswald", "sans-serif";
-    padding-top: 5rem;
+    font-family: "Raleway", sans-serif;
+    background: url("../images/CBBdesktop.jpg");
+    padding-top: 10rem;
     padding-left: 2rem;
     padding-bottom: 15rem;
   }
   body .intro #intro--h6 {
-    color: #df6945;
-    font-size: 35px;
+    color: #d67457;
+    font-size: 45px;
+    font-weight: 550;
     padding-bottom: 1rem;
     -webkit-animation: fadeIn 1s, 0.5s ease-out 0s 1 slideInFromLeft;
             animation: fadeIn 1s, 0.5s ease-out 0s 1 slideInFromLeft;
   }
   body .intro #intro--name {
-    color: #d84a4a;
-    font-size: 55px;
+    color: #fa5d5d;
+    font-size: 45px;
+    font-weight: 700;
     padding-bottom: 1rem;
     -webkit-animation: fadeIn 1.5s, 0.5s ease-out 0s 1 slideInFromLeft;
             animation: fadeIn 1.5s, 0.5s ease-out 0s 1 slideInFromLeft;
@@ -161,16 +223,16 @@ body {
   body .intro #intro--description {
     color: #c9c9c9;
     font-size: 20px;
-    font-weight: 200;
+    font-weight: 550;
     padding-right: 1.5rem;
     -webkit-animation: fadeIn 2s, 0.5s ease-out 0s 1 slideInFromLeft;
             animation: fadeIn 2s, 0.5s ease-out 0s 1 slideInFromLeft;
   }
   body .intro #down-button {
     margin-top: 3rem;
-    color: #d84a4a;
+    color: #fa5d5d;
     background: #181818;
-    border-color: #d84a4a;
+    border-color: #fa5d5d;
     border-radius: 5px;
     border-style: solid;
     border-width: 3px;
@@ -182,15 +244,15 @@ body {
             animation: fadeIn 2.5s, 0.5s ease-out 0s 1 slideInFromLeft;
   }
   body .intro #down-button #a--button {
-    color: #d84a4a;
+    color: #fa5d5d;
   }
   body .project {
     color: #fff;
-    font-family: "Oswald", "sans-serif";
+    font-family: "Raleway", sans-serif;
     padding: 10rem 0 20rem 2rem;
   }
   body .project #project--header {
-    color: #d84a4a;
+    color: #fa5d5d;
     font-size: 45px;
     padding-bottom: 1rem;
     letter-spacing: 2px;
@@ -200,7 +262,7 @@ body {
   }
   body .project .project1 #project1--title {
     color: #c9c9c9;
-    font-size: 25px;
+    font-size: 20px;
     padding-bottom: 1rem;
     margin-top: 3rem;
   }
@@ -214,8 +276,6 @@ body {
     border-radius: 5px;
     border-style: solid;
     border-width: 2.5px;
-    -webkit-box-shadow: 20px 20px 6px -6px #c9c9c9;
-            box-shadow: 20px 20px 6px -6px #c9c9c9;
   }
   body .project .project1 #project1--description {
     color: #c9c9c9;
@@ -234,27 +294,32 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: 50px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    height: 50px;
     list-style-type: none;
     line-height: 20px;
   }
   body .project .project1 .project1--list_item {
-    padding: 0 0.5rem;
+    padding: 0.5rem 0.5rem;
+    font-size: 20px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 5%;
+            flex: 0 5%;
   }
   body .project #project1 {
     margin-bottom: 10rem;
   }
   body .about-me {
     color: #fff;
-    font-family: "Oswald", "sans-serif";
+    font-family: "Raleway", sans-serif;
     padding-left: 2rem;
+    padding-top: 10rem;
   }
   body .about-me #about--header {
-    color: #d84a4a;
+    color: #fa5d5d;
     font-size: 45px;
     padding-bottom: 1rem;
     letter-spacing: 2px;
@@ -268,7 +333,7 @@ body {
     padding-bottom: 1rem;
   }
   body .about-me #skill--header {
-    color: #d84a4a;
+    color: #fa5d5d;
     font-size: 20px;
     padding-bottom: 0.5rem;
     letter-spacing: 2px;
@@ -295,31 +360,25 @@ body {
 }
 
 @media (min-width: 760px) {
-  body nav {
-    position: relative;
-    background: #181818;
-    font-family: "Oswald", "sans-serif";
-    font-size: 20px;
-    font-weight: 400;
-    letter-spacing: 2px;
-  }
   body .intro {
     color: #fff;
-    font-family: "Oswald", "sans-serif";
+    font-family: "Raleway", sans-serif;
     padding-top: 10rem;
     padding-left: 2rem;
     padding-bottom: 15rem;
   }
   body .intro #intro--h6 {
-    color: #df6945;
+    color: #d67457;
     font-size: 45px;
+    font-weight: 550;
     padding-bottom: 1rem;
     -webkit-animation: fadeIn 1s, 0.5s ease-out 0s 1 slideInFromLeft;
             animation: fadeIn 1s, 0.5s ease-out 0s 1 slideInFromLeft;
   }
   body .intro #intro--name {
-    color: #d84a4a;
+    color: #fa5d5d;
     font-size: 55px;
+    font-weight: 700;
     padding-bottom: 1rem;
     -webkit-animation: fadeIn 1.5s, 0.5s ease-out 0s 1 slideInFromLeft;
             animation: fadeIn 1.5s, 0.5s ease-out 0s 1 slideInFromLeft;
@@ -327,16 +386,16 @@ body {
   body .intro #intro--description {
     color: #c9c9c9;
     font-size: 25px;
-    font-weight: 200;
+    font-weight: 550;
     padding-right: 1.5rem;
     -webkit-animation: fadeIn 2s, 0.5s ease-out 0s 1 slideInFromLeft;
             animation: fadeIn 2s, 0.5s ease-out 0s 1 slideInFromLeft;
   }
   body .intro #down-button {
     margin-top: 3rem;
-    color: #d84a4a;
+    color: #fa5d5d;
     background: #181818;
-    border-color: #d84a4a;
+    border-color: #fa5d5d;
     border-radius: 5px;
     border-style: solid;
     border-width: 3px;
@@ -348,28 +407,29 @@ body {
             animation: fadeIn 2.5s, 0.5s ease-out 0s 1 slideInFromLeft;
   }
   body .intro #down-button #a--button {
-    color: #d84a4a;
+    color: #fa5d5d;
   }
   body .project {
     color: #fff;
-    font-family: "Oswald", "sans-serif";
+    font-family: "Raleway", sans-serif;
     padding: 10rem 0 20rem 2rem;
   }
   body .project #project--header {
-    color: #d84a4a;
+    color: #fa5d5d;
     font-size: 45px;
     padding-bottom: 1rem;
     letter-spacing: 2px;
   }
   body .project .project1 {
     margin-top: 3rem;
+    padding: 0 2rem 0 0;
     color: #fff;
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: 0.1fr 1fr 0.1fr;
-        grid-template-rows: 0.1fr 1fr 0.1fr;
-    -ms-grid-columns: 0.5fr 0.5fr 0.5fr 0.5fr;
-        grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr;
+    -ms-grid-rows: 0.1fr 0.1fr 0.1fr 0.1fr;
+        grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr;
+    -ms-grid-columns: 0.1fr 0.1fr 0.1fr;
+        grid-template-columns: 0.1fr 0.1fr 0.1fr;
         grid-template-areas: "title title title" "photo photo photo" "description description description" "footer footer footer";
   }
   body .project .project1 #project1--title {
@@ -382,7 +442,7 @@ body {
     grid-area: title;
   }
   body .project .project1 #project1--img {
-    width: 120%;
+    width: 50%;
     height: auto;
     margin-bottom: 2rem;
     -ms-grid-row: 2;
@@ -394,8 +454,6 @@ body {
     border-radius: 5px;
     border-style: solid;
     border-width: 2.5px;
-    -webkit-box-shadow: 20px 20px 6px -6px #c9c9c9;
-            box-shadow: 20px 20px 6px -6px #c9c9c9;
   }
   body .project .project1 #project1--description {
     color: #c9c9c9;
@@ -418,11 +476,11 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: 50px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    height: 50px;
     list-style-type: none;
     line-height: 20px;
     -ms-grid-row: 4;
@@ -442,10 +500,10 @@ body {
     color: #fff;
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: 0.1fr 1fr 0.1fr;
-        grid-template-rows: 0.1fr 1fr 0.1fr;
-    -ms-grid-columns: 0.5fr 0.5fr 0.5fr 0.5fr;
-        grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr;
+    -ms-grid-rows: 0.1fr 0.1fr 0.1fr 0.1fr;
+        grid-template-rows: 0.1fr 0.1fr 0.1fr 0.1fr;
+    -ms-grid-columns: 0.5fr 0.1fr 0.5fr;
+        grid-template-columns: 0.5fr 0.1fr 0.5fr;
         grid-template-areas: "title title title" "photo photo photo" "description description description" "footer footer footer";
   }
   body .project .project1 #project1--title {
@@ -458,7 +516,7 @@ body {
     grid-area: title;
   }
   body .project .project1 #project1--img {
-    width: 120%;
+    width: 100%;
     height: auto;
     margin-bottom: 2rem;
     -ms-grid-row: 2;
@@ -470,8 +528,6 @@ body {
     border-radius: 5px;
     border-style: solid;
     border-width: 2.5px;
-    -webkit-box-shadow: 20px 20px 6px -6px #c9c9c9;
-            box-shadow: 20px 20px 6px -6px #c9c9c9;
   }
   body .project .project1 #project1--description {
     color: #c9c9c9;
@@ -507,16 +563,20 @@ body {
     grid-area: footer;
   }
   body .project .project1 .project1--list_item {
-    margin: 0 1rem 0 0;
-    font-size: 25px;
+    padding: 0.5rem 0.5rem;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 5%;
+            flex: 0 5%;
+    font-size: 35px;
   }
   body .about-me {
     color: #fff;
-    font-family: "Oswald", "sans-serif";
+    font-family: "Raleway", sans-serif;
     padding-left: 2rem;
+    padding-top: 10rem;
   }
   body .about-me #about--header {
-    color: #d84a4a;
+    color: #fa5d5d;
     font-size: 45px;
     padding-bottom: 1rem;
     letter-spacing: 2px;
@@ -530,7 +590,7 @@ body {
     padding-bottom: 1rem;
   }
   body .about-me #skill--header {
-    color: #d84a4a;
+    color: #fa5d5d;
     font-size: 20px;
     padding-bottom: 0.5rem;
     letter-spacing: 2px;
@@ -557,31 +617,31 @@ body {
 }
 
 @media (min-width: 1100px) {
-  body nav {
-    position: relative;
-    font-size: 20px;
-    font-weight: 400;
-    letter-spacing: 1px;
+  body .hr--titlebar {
+    width: 100%;
   }
   body .intro {
     color: #fff;
-    font-family: "Oswald", "sans-serif";
-    padding: 10rem 0 20rem 4rem;
+    font-family: "Raleway", sans-serif;
+    background-size: cover;
+    padding: 20rem 0 30rem 4rem;
   }
   body .intro #intro--h6 {
-    color: #df6945;
-    font-size: 55px;
+    color: #d67457;
+    font-size: 65px;
+    font-weight: 550;
     padding-bottom: 1.5rem;
   }
   body .intro #intro--name {
-    color: #d84a4a;
-    font-size: 65px;
+    color: #fa5d5d;
+    font-size: 75px;
+    font-weight: 700;
     padding-bottom: 1.5rem;
   }
   body .intro #intro--description {
     color: #c9c9c9;
     font-size: 35px;
-    font-weight: 200;
+    font-weight: 550;
     padding-right: 1.5rem;
   }
   body .intro #down-button {
@@ -593,7 +653,7 @@ body {
     padding: 1.5rem;
   }
   body .intro #down-button #a--button {
-    color: #d84a4a;
+    color: #fa5d5d;
   }
   body .project {
     padding: 10rem 0 20rem 4rem;
@@ -619,7 +679,7 @@ body {
   }
   body .project .project1 #project1--title {
     color: #c9c9c9;
-    font-size: 35px;
+    font-size: 45px;
   }
   body .project .project1 #project1--description {
     color: #c9c9c9;
@@ -641,7 +701,10 @@ body {
   }
   body .project .project1 .project1--list_item {
     margin: 0 1rem 0 0;
-    font-size: 25px;
+    font-size: 35px;
+    -webkit-box-flex: 0.01;
+        -ms-flex: 0.01 1%;
+            flex: 0.01 1%;
   }
   body .project .project1 #hr--project1 {
     display: none;
@@ -651,29 +714,37 @@ body {
   }
   body .about-me {
     padding-left: 4rem;
+    padding-top: 10rem;
   }
   body .about-me #about--header {
-    color: #d84a4a;
+    color: #fa5d5d;
     font-size: 55px;
     padding-bottom: 1rem;
     letter-spacing: 2px;
+  }
+  body .about-me .about-me--element {
+    font-size: 25px;
   }
   body .about-me .skill--list_item {
     font-size: 45px;
     padding: 1rem 0;
     margin-bottom: 1rem;
     -webkit-box-flex: 0.5;
-        -ms-flex: 0.5 0 50%;
-            flex: 0.5 0 50%;
+        -ms-flex: 0.5 50%;
+            flex: 0.5 50%;
   }
 }
 
 .HTML5 {
-  color: #ffb380;
+  color: #ff5050;
 }
 
 .CSS3 {
   color: #66b3ff;
+}
+
+.JS {
+  color: #ffe866;
 }
 
 .SASS {
@@ -698,5 +769,9 @@ body {
 
 .PHP {
   color: #a8a8fd;
+}
+
+.MongoDB {
+  color: #6eff86;
 }
 /*# sourceMappingURL=main.css.map */

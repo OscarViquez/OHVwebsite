@@ -1,6 +1,6 @@
 // Color ______________________________________________________________________
-$primary-color: #d84a4a;
-$second-color: #df6945;
+$primary-color: #fa5d5d;
+$second-color: #d67457;
 $third-color: #c9c9c9;
 $white: #fff;
 $black: #181818;
@@ -41,18 +41,3 @@ $largerdesktop: 900px;
     }
   }
   
-
-// Navigation bar Desktop ______________________________________________________________________
-nav {
-  height: 10vh;
-  background: $black;
-}
-
-.nav-links {
-  display: flex;
-  width: 50%;
-  height: 100%;
-  justify-content: space-around;
-  align-items: center;
-  margin-left: auto;
-}
