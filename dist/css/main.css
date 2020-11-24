@@ -109,6 +109,11 @@ nav ul li {
   font-size: 30px;
 }
 
+.fa-github-alt {
+  font-size: 34px;
+  color: #fff;
+}
+
 nav ul li a {
   color: #fff;
   font-size: 20px;
@@ -121,6 +126,33 @@ a.active,
 a:hover {
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+
+#Nav--About:hover, #Nav--Work:hover {
+  background: #fa5d5d;
+  text-decoration: none;
+  color: #fff;
+}
+
+.fa-instagram:hover {
+  text-decoration: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #df679d;
+}
+
+.fa-linkedin:hover {
+  text-decoration: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #2ea6dd;
+}
+
+.fa-github-alt:hover {
+  text-decoration: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #f4cbb2;
 }
 
 .checkbtn {

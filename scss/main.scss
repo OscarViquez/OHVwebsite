@@ -110,10 +110,16 @@ nav ul li {
   margin: 0 5px;
 }
 
-.fa-instagram, .fa-linkedin {
+// Icons--------------------------------- //
+.fa-instagram, .fa-linkedin{
   font-size: 30px;
 }
 
+.fa-github-alt {
+  font-size: 34px;
+  color: #fff;
+}
+// -------------------------------------- //
 nav ul li a {
   color: $white;
   font-size: size(small);
@@ -122,12 +128,40 @@ nav ul li a {
   padding: 7px 13px;
   border-radius: 3px;
 }
-
+// HOvER EFFECTS ------------------------------ //
 a.active,
 a:hover {
   transition: 0.5s;
 }
 
+#Nav--About:hover, #Nav--Work:hover {
+  background: $primary-color;
+  text-decoration: none;
+  color: $white;
+}
+
+
+.fa-instagram:hover {
+  
+  text-decoration: none;
+  transition: 0.5s;
+  color: #df679d;
+}
+
+.fa-linkedin:hover {
+  
+  text-decoration: none;
+  transition: 0.5s;
+  color: #2ea6dd;
+}
+
+.fa-github-alt:hover{
+  
+  text-decoration: none;
+  transition: 0.5s;
+  color: #f4cbb2;
+}
+//  ------------------------------ //
 .checkbtn {
   float: right;
   font-size: size(regular);
@@ -137,6 +171,7 @@ a:hover {
   cursor: pointer;
   display: none;
 }
+
 
 #check {
   display: none;
